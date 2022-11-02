@@ -1,0 +1,12 @@
+body{
+    padding-left: 35%;
+    padding-right: 40%;
+}
+.forget{
+    padding-top: 10%;
+    margin-top: 200px;
+    background-color: aquamarine;
+    height: 250px;
+    color: green;
+    text-align: center;
+}

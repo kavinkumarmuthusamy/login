@@ -1,0 +1,28 @@
+.left{
+    background-color: rgba(18, 18, 19, 0.842);
+    margin-right: 51%;
+    margin-top: 0%;
+    height: 635px;
+    border-radius: 5rem;
+        color: aqua;
+    padding-top: 5px;
+    text-align: center;
+}
+.rigth{
+    margin-left: 51%;
+    margin-top: -49%;
+    height: 635px;
+    border-radius: 5rem;
+    background-color: rgba(120, 17, 216, 0.842);
+     color: aliceblue;
+    text-align: center;
+}
+button{
+    background-color:rgb(224, 224, 106);
+}
+button:hover{
+    background-color: rgb(115, 253, 253);
+}
+.bold{
+    color: rgb(243, 38, 38);
+}
