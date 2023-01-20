@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGN IN</title>
+    <link rel="stylesheet" href="signin.css">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+<body>
+    <div class="total">
+    <div class="left">
+        <form action="" class="form">
+            <div class="form-group">
+
+                <h3>First Name </h3>
+                <input type="text" placeholder="   raj  " id="username" class="but">
+                <i id="iconf" class="ion-"></i>
+                <p id="conf" style="color: red;"></p>
+            </div>
+            <!-- firstname -->
+            <div class="form-group">
+                <h3>Last Name </h3>
+                <input type="text" placeholder="  kumar  " id="lname" class="but" >
+                <i id="iconl" class="ion-"></i>
+                <p id="conl" style="color: red;"></p>
+            </div>
+            <!-- lastname -->
+            <div class="form-group">
+                <h3>Email ID</h3>
+                <input type="email" placeholder="  XXXXX@gmail.com" id="email" class="but" >
+                <i id="icone" class="ion-"></i>
+                <p id="cone" style="color: red;"></p>
+            </div>
+            <!-- email -->
+            <div class="form-group">
+                <h3>Mobile Number</h3>
+                <input type="number" placeholder="  9876543210" id="number" class="but" >
+                <i id="iconn" class="ion-"></i>
+                <p id="conn" style="color: red;"></p>
+            </div>
+            <!-- mobilenumber -->
+            <div class="form-group">
+                <h3>Date Of Birth</h3>
+                <input type="date" id="dofb" class="but" >
+                <i id="icond" class="ion-"></i>
+                <p id="cond" style="color: red;"></p>
+            </div>
+            <!-- date of birth -->
+            <div class="form-group">
+                <h3>Pasword</h3>
+                <input type="password" placeholder=" raj#123" id="password" class="but" >
+                <i id="iconp" class="ion-"></i>
+                <p id="conp" style="color: red;"></p>
+            </div>
+            <!-- password -->
+            <div class="form-group">
+                <h3>Confirm password</h3>
+                <input type="password" placeholder=" raj#123" id="confirmpassword" class="but">
+                <i id="iconc" class="ion-"></i>
+                <p id="conc" style="color: red;"></p>
+            </div>
+            <!-- confirmpassword -->
+            <button onclick="store()" class="submit">submit</button>
+            <!-- <input type="submit" value="submit" class="submit"> -->
+            <script src="index.js"></script>
+    
+    </div>
+    <div class="rigth">
+        <h1>Extra Information</h1>
+        <p>It can not necessary</p>
+        <h3>Status</h3><select id="Status">
+            <option>Single</option>
+            <option>Married</option>
+        </select>
+
+        <h3>Gender</h3><select id="Gender">
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+        </select>
+        </form>
+        <hr>
+        <h3>Notice</h3>
+        <ul>
+            <li>At least 5 letter want first name</li><br>
+            <li>The password should be same.</li><br>
+            <li>The password was minimum 8 character</li><br>
+            <li>Maximum 12 character</li><br>
+            <li>At least 1 special character</li><br>
+            <li>At least 1 number</li><br>
+        </ul>
+        <h2 class="bold"> Do not't waste "TIME" and "WATER" that is only waste your "LIFE"</h2>
+    </div>
+</div>
+</body>
+
+</html>

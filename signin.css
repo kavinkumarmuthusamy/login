@@ -1,0 +1,54 @@
+.total{
+    padding: auto;
+    text-align: center;
+}
+.left{
+    background-color: rgba(18, 18, 19, 0.842);
+    margin-top: 0%;
+    border-radius: 5rem;
+        color: aqua;
+    padding-top: 5px;
+    text-align: center;
+    padding-bottom: 5px;
+}
+.rigth{
+    margin-top: 0;
+    border-radius: 5rem;
+    background-color: rgba(120, 17, 216, 0.842);
+     color: aliceblue;
+    text-align: center;
+}
+.submit{
+    background-color:rgb(224, 224, 106);
+}
+.submit:hover{
+    background-color: rgb(159, 253, 115);
+}
+.bold{
+    color: rgb(243, 38, 38);
+    margin: 0;
+    padding: 0;
+}
+.butred{
+    background-color: rgb(236, 97, 97);
+    border-color: rgb(243, 17, 9);
+    margin: 0;
+    padding: 0;
+}
+.but{
+    background-color: rgb(152, 252, 121);
+    border-color: rgb(34, 133, 14);
+}
+input:hover{
+    background-color: yellow;
+   border-color: goldenrod;
+}
+.ion-ios-checkmark{
+   color: greenyellow;
+}
+.ion-android-alert{
+    color: red;
+}
+:-ms-input-placeholder{
+    color: rgb(252, 11, 11);
+}
