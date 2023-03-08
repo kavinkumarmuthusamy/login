@@ -159,7 +159,7 @@ if(g==0){
     let text="Thank for fill the form\nsall we move webpage";
     if(confirm(text)==true){
         location.replace("forget.html"); 
-        setTimeout(()=>{location.replace("https://kavinkumarmuthusamy.github.io/demo/"); });
+        setTimeout(()=>{location.replace("https://kavinkumarmuthusamy.github.io/demo/");},5000);
         
     }else{
         alert(" Thank You ");
@@ -177,7 +177,7 @@ function summit(){
     let d="kavin@123";
     if(a==c&&b==d){
         location.replace("forget.html");
-        setTimeout(()=>{location.replace("https://kavinkumarmuthusamy.github.io/demo/"); });
+        setTimeout(()=>{location.replace("https://kavinkumarmuthusamy.github.io/demo/");},5000);
     }else{
         alert("It is not correct user name and password");
     }
