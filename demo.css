@@ -1,0 +1,46 @@
+body{
+    background-color: azure;
+}
+.first{
+   margin-top: 10px;
+   padding:3%;
+   padding-left: 10%;
+    background-color: aquamarine;
+}
+.size{
+    font-size: 350%;
+}
+.left{
+    margin-top: 120px;
+    margin-right: 55%;
+}
+.right{
+    margin-top: -27.3%;
+   
+    margin-left: 50%;
+}
+.button5{
+    border-radius:55% ;
+background-color: rgb(8, 8, 8);
+color: aliceblue;
+cursor: pointer;
+}
+button{
+    background-color: aquamarine;
+    border: 0pc;
+    border-radius: 40%;
+}
+button:hover{
+    background-color:rgb(59, 182, 141);
+}
+#ns{
+text-decoration: none;
+color:black;
+}
+#ss{
+    text-decoration: none;
+    color:black;
+    }
+    .see{
+      background-image: linear-gradient(to bottom left, red,rgb(15, 241, 15),yellow,rgb(9, 248, 236));
+    }
