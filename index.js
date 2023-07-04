@@ -176,7 +176,7 @@ function summit(){
     let c="kavin";
     let d="kavin@123";
     if(a==c&&b==d){
-        location.replace("forget.html");
+        location.replace("demo.html");
         setTimeout(location.replace("demo.html"),5000);
     }else{
         alert("It is not correct user name and password");
