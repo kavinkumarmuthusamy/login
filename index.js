@@ -174,7 +174,7 @@ function summit(){
     let a = document.getElementById("us").value;
     let b = document.getElementById("pass").value;
     let c="kavin";
-    let d="kavin@123";
+    let d="Kavin@1234";
     if(a==c&&b==d){
         location.replace("demo.html");
     }else{
