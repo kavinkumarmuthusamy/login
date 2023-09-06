@@ -14,46 +14,46 @@
 <body>
     <div class="total">
     <div class="left">
-        <form action="" class="form">
+        <form method="post" name="login" class="form">
             <div class="form-group">
 
                 <h3>First Name </h3>
-                <input type="text" placeholder="   raj  " id="username" class="but">
+                <input type="text" name="firstname" placeholder="   raj  " id="username" class="but">
                 <i id="iconf" class="ion-"></i>
                 <p id="conf" style="color: red;"></p>
             </div>
             <!-- firstname -->
             <div class="form-group">
                 <h3>Last Name </h3>
-                <input type="text" placeholder="  kumar  " id="lname" class="but" >
+                <input type="text" name="lastname" placeholder="  kumar  " id="lname" class="but" >
                 <i id="iconl" class="ion-"></i>
                 <p id="conl" style="color: red;"></p>
             </div>
             <!-- lastname -->
             <div class="form-group">
                 <h3>Email ID</h3>
-                <input type="email" placeholder="  XXXXX@gmail.com" id="email" class="but" >
+                <input type="email" name="email" placeholder="  XXXXX@gmail.com" id="email" class="but" >
                 <i id="icone" class="ion-"></i>
                 <p id="cone" style="color: red;"></p>
             </div>
             <!-- email -->
             <div class="form-group">
                 <h3>Mobile Number</h3>
-                <input type="number" placeholder="  9876543210" id="number" class="but" >
+                <input type="number" name="phonenumber" placeholder="  9876543210" id="number" class="but" >
                 <i id="iconn" class="ion-"></i>
                 <p id="conn" style="color: red;"></p>
             </div>
             <!-- mobilenumber -->
             <div class="form-group">
                 <h3>Date Of Birth</h3>
-                <input type="date" id="dofb" class="but" >
+                <input type="date" id="dofb" name="dateofbirth" class="but" >
                 <i id="icond" class="ion-"></i>
                 <p id="cond" style="color: red;"></p>
             </div>
             <!-- date of birth -->
             <div class="form-group">
                 <h3>Pasword</h3>
-                <input type="password" placeholder=" raj#123" id="password" class="but" >
+                <input type="password" name="password" placeholder=" raj#123" id="password" class="but" >
                 <i id="iconp" class="ion-"></i>
                 <p id="conp" style="color: red;"></p>
             </div>
@@ -65,20 +65,19 @@
                 <p id="conc" style="color: red;"></p>
             </div>
             <!-- confirmpassword -->
-            <button onclick="store()" class="submit">submit</button>
+            <button type="submit"  class="submit">submit</button>
             <!-- <input type="submit" value="submit" class="submit"> -->
-            <script src="index.js"></script>
     
     </div>
     <div class="rigth">
         <h1>Extra Information</h1>
         <p>It can not necessary</p>
-        <h3>Status</h3><select id="Status">
+        <h3>Status</h3><select id="Status" name="status">
             <option>Single</option>
             <option>Married</option>
         </select>
 
-        <h3>Gender</h3><select id="Gender">
+        <h3>Gender</h3><select id="Gender" name="gender">
             <option>Male</option>
             <option>Female</option>
             <option>Other</option>
@@ -97,6 +96,185 @@
         <h2 class="bold"> Do not't waste "TIME" and "WATER" that is only waste your "LIFE"</h2>
     </div>
 </div>
+<script >
+   const scriptURL = 'https://script.google.com/macros/s/AKfycbz15HWw775zclHeCF40rp1smc3ali57TkO5DdNUGyVm3jKij532aC-0zf4_dFFwo7FD/exec';
+const form = document.forms['login'];
+const dataList = document.getElementById('data-list');
+
+var object={}
+form.addEventListener('submit', e => {
+e.preventDefault();
+const formData = new FormData(form);
+const email = formData.get('email'); // Get the email value from the form
+
+// Check if the email is already in the data fetched from the Google Apps Script
+if (checkEmailInData(email)) {
+alert("Email already exists. Please use a different email.");
+} else {
+    let g=0;
+    event.preventDefault();
+    let z = document.getElementById("username").value;
+    //   firstname  
+    if (z.length <= 4 || z.length >= 14 || z == undefined) {
+        console.log(z);
+        document.getElementById("username").className = "butred";
+        document.getElementById("iconf").className = "ion-android-alert";
+        document.getElementById("conf").innerHTML = "* please enter valid first name";
+        g=1;
+    } else {
+        let res = 0;
+        const zrr = z.split("");
+        for (let i = 0; i < zrr.length; i++) {
+            if (!(isNaN(zrr[i]))) {
+                res = 1;
+                break;
+            }
+        } if (res == 0) {
+            document.getElementById("username").className = "but";
+            document.getElementById("iconf").className = "ion-ios-checkmark";
+            document.getElementById("conf").innerHTML = "";
+        }
+        else {
+            document.getElementById("username").className = "butred";
+            document.getElementById("iconf").className = "ion-android-alert";
+            document.getElementById("conf").innerHTML = "* please enter letter";
+            g=1;
+        }
+    }
+
+    //    lastname
+
+    let y = document.getElementById("lname").value;
+    if (y.length > 1 || y.length < 1 || !(isNaN(y))) {
+        document.getElementById("lname").className = "butred";
+        document.getElementById("iconl").className = "ion-android-alert";
+        document.getElementById("conl").innerHTML = "* please enter 1 letter";
+        g=1;
+    } else {
+        document.getElementById("lname").className = "but";
+        document.getElementById("iconl").className = "ion-ios-checkmark";
+        document.getElementById("conl").innerHTML = "";
+    }
+
+    //  email
+
+    let x = document.getElementById("email").value;
+    const regExp = /^([a-zA-Z0-9-_\.]+)@([a-zA-Z0-9]+)\.([a-zA-Z]{2,10})(\.[a-zA-Z]{2,8})?$/
+    if (x === "" || !(regExp.test(x))) {
+        document.getElementById("email").className = "butred";
+        document.getElementById("icone").className = "ion-android-alert";
+        document.getElementById("cone").innerHTML = "* please enter valid email";
+        g=1;
+    } else {
+        document.getElementById("email").className = "but";
+        document.getElementById("icone").className = "ion-ios-checkmark";
+        document.getElementById("cone").innerHTML = "";
+    }
+
+    //mobilenumber
+    let w = document.getElementById("number").value;
+    if (w >= 1000000000 && w <= 9999999999) {
+        document.getElementById("number").className = "but";
+        document.getElementById("iconn").className = "ion-ios-checkmark";
+        document.getElementById("conn").innerHTML = "";
+    }
+    else {
+        document.getElementById("number").className = "butred";
+        document.getElementById("iconn").className = "ion-android-alert";
+        document.getElementById("conn").innerHTML = "* please enter only 10 number";
+        g=1;
+    }
+
+    // date of birth
+    let v = document.getElementById("dofb").value;
+    const r = new Date();
+   if(v>r||v==null){
+    document.getElementById("dofb").className = "butred";
+        document.getElementById("icond").className = "ion-android-alert";
+        document.getElementById("cond").innerHTML = "* please enter date of birth";
+        g=1;
+   }
+   else{
+    document.getElementById("dofb").className = "but";
+    document.getElementById("icond").className = "ion-ios-checkmark";
+    document.getElementById("cond").innerHTML = "";
+   }
+
+//    password 
+
+let u = document.getElementById("password").value;
+let srr=u.split("");
+let s=0;
+let rr=["!","@","#","$"];
+for(let i=0;i<srr.length;i++){
+if(!isNaN(srr[i])){
+    s=1;
+    console.log(s)
+}
+}
+for(let i=0;i<srr.length;i++){
+for(let j=0;j<rr.length;j++){
+    if(s==1&&srr[i]==rr[j]){
+        s=2;
+    }
+}
+}
+if(s==2&&u.length>=8&&u.length<=12){
+    document.getElementById("password").className = "but";
+    document.getElementById("iconp").className = "ion-ios-checkmark";
+    document.getElementById("conp").innerHTML = "";
+}else{
+    document.getElementById("password").className = "butred";
+    document.getElementById("iconp").className = "ion-android-alert";
+    document.getElementById("conp").innerHTML = "* please enter password with about rules";
+    g=1;
+}
+
+// conform password
+
+let t = document.getElementById("confirmpassword").value;
+if(u==t){
+    document.getElementById("confirmpassword").className = "but";
+    document.getElementById("iconc").className = "ion-ios-checkmark";
+    document.getElementById("conc").innerHTML = "";
+   }
+   else{
+        document.getElementById("confirmpassword").className = "butred";
+        document.getElementById("iconc").className = "ion-android-alert";
+        document.getElementById("conc").innerHTML = "* please enter same password";
+        g=1;
+   }
+//    total
+if(g==0){
+   fetch(scriptURL, { method: 'POST', body: formData })
+   .then(response => alert("Thank you! your form is submitted successfully." ))
+   .then(() => { window.location.reload(); })
+   .catch(error => console.error('Error!', error.message));
+   }
+}
+});
+// Function to check if email exists in the data fetched from the Google Apps Script
+function checkEmailInData(email) {
+const dataListItems = object;
+for (let i = 0; i < dataListItems.length; i++) {
+const a=dataListItems[i].email;
+// const listItemText = dataListItems[i].textContent;
+if (a==email) {
+return true; // Email already exists
+}
+}
+return false; // Email not found
+}
+
+fetch(scriptURL)
+.then(response => response.json())
+.then(data => {
+object=data;
+})
+.catch(error => {
+console.error('Error fetching data:', error);
+});
+</script>
 </body>
 
 </html>
