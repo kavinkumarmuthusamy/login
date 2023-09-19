@@ -34,7 +34,7 @@ const password = formData.get('pass'); // Get the email value from the form
 
 // Check if the email is already in the data fetched from the Google Apps Script
 if (checkEmailInData(email,password)) {
-alert("Email already exists. Please use a different email.");
+location.replace("demo.html");
 } else {
    alert("Invalid user name");
 }
