@@ -21,15 +21,16 @@
             <h4>sign in by entering the information below</h4>
         </div>
         <div class="inp">
-            <i class="fa fa-user"></i><input id="us" class="but" type="text" placeholder=" Username">
+             <form method="get" name="validate">
+            <i class="fa fa-user"></i><input id="us" class="but" type="text" name="user" placeholder=" Username">
             <hr>
-            <i class="fa fa-lock"></i><input id="pass" class="but" type="password" placeholder=" Password">
+            <i class="fa fa-lock"></i><input id="pass" class="but" name="pass" type="password" placeholder=" Password">
             <hr>
             <br>
             <a href="#" class="for" onclick=check()>Forget Password</a>
-            <a id="p1" href="forget.html" > </a>
-            
-            <button class="button" onclick="summit()">Get Started</button>
+            <a id="p1" href="forget.html" > </a>         
+            <button class="button" type="submit">Get Started</button>
+        </form>
             <h3 class="don">Don't have an account</h3>
             <a class="tex2" href="signin.html">SIGN UP</a>
         </div>
